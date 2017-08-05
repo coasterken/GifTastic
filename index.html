@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>GifTastic</title>
+
+  <meta charset="utf-8">
+
+  <!-- Viewport - for management of various device sizes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Style Sheets -->
+  <!-- Bootstrap style sheet - verify current version -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Personal style sheet - change location  -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+ 
+  <!-- Link jquery here -->
+  <!-- uncompressed -->
+ 
+</head>
+<body>
+  
+<!--  Bootstrap Grid  -->
+<div class="container-fluid text-center"> 
+  <!-- Button Row -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class= "row buttons">
+        
+      </div>  <!-- End of buttons Row -->
+      
+    </div>  <!-- End of button column -->
+  </div> <!-- End of Main Row -->
+
+  <!-- Gifphy & New Item Row -->
+  <div class="row actionRow">
+    <div class="col-md-7 gifs">
+      
+    </div> <!--  End of gifs column  -->
+    <div class="col-md-3">
+      <form id="starForm">
+       <label class="lbl" for="starInput">Add a Star</label>
+       <br>
+
+       <input type="search" id="starInput">
+        <br><br>
+
+       <input id="addStar" type="submit" value="Submit">
+     </form>
+    </div> <!--  End of add new column --> 
+  </div> <!--  End of action row -->
+
+</div> <!--  End of Main Container -->
+
+ <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+<!-- Link javascript -->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+</html>

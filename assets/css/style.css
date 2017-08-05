@@ -1,0 +1,56 @@
+/*Styles for GifTastic*/
+
+
+body {
+    color: black;
+    text-align: center;
+}
+
+body, html, .container-fluid {
+    background-color: darkslategray;
+    height: 100%;
+}
+
+.buttons {
+  margin-bottom: 30px;
+}
+
+.starButton {
+float: left;
+background-color: lightsteelblue;
+border: 2px outset;
+outline:0;
+border-radius: 5px;
+margin: 5px 5px;
+}
+
+.buttonBackground {
+  background-color: steelblue;
+}
+
+.starButton:hover {
+   background-color: steelblue;
+}
+
+.starImg {
+margin: 10px 10px 10px 0px      ;
+}
+
+.ratingTxt {
+float: left;
+text-align: left;
+color:white;
+}
+
+#starForm {
+  text-align: left;
+}
+
+.lbl {
+  color:white;
+
+}
+
+#starInput {
+  color: black;
+}
