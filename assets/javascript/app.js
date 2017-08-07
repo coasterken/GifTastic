@@ -34,7 +34,8 @@ var currentStar = "";
 
 //********** Stuff to run at load time
 
-loadButtons();
+loadButtons();;
+
 
 //********* Events 
 //********* Events 
@@ -107,8 +108,28 @@ $(document).on("click", ".starButton", function() {
 
 }) // *********** end of starButton button
 
+
+//click on a star - activate gif/deactivate giv
+$(document).on("click", ".starImg", function() {
+  
+
+  var changeLink = "";
+
+  if ($(this).attr("data-status") === "static") {
+    changeLink = $(this).attr("data-actionlink");
+    $(this).attr("src", changeLink);
+    $(this).attr("data-status", "active");
+  } else {
+    changeLink = $(this).attr("data-staticlink");
+    $(this).attr("src", changeLink);
+    $(this).attr("data-status", "static");
+  }
+
+}) //end of starimage gif action
+
 //Add a star (on anything haha)
-$(document).on("click", "#addStar", function() {
+//$(document).on("click", "#addStar", function() {
+$("#addStar").on("click", function() {
 
   event.preventDefault();
 
@@ -125,24 +146,6 @@ $(document).on("click", "#addStar", function() {
 
 })
 
-
-$(document).on("click", ".starImg", function() {
-  
-
-  var changeLink = "";
-
-  if ($(this).attr("data-status") === "static") {
-    changeLink = $(this).attr("data-actionlink");
-    $(this).attr("src", changeLink);
-    $(this).attr("data-status", "active");
-  } else {
-    changeLink = $(this).attr("data-staticlink");
-    $(this).attr("src", changeLink);
-    $(this).attr("data-status", "static");
-  }
-
-})
-
 //**********  Functions  **********
 //**********  Functions  **********
 //**********  Functions  **********
@@ -153,22 +156,16 @@ function loadButtons() {
   $(".buttons").empty();
   $.each(topics, function(index, value) {
 
-    addAButton(value);
-  
-  })  // end of each loop
-} //********** end of loadbuttons
-
-function addAButton(value) {
-
-  //Create a button and add to 
+     //Create a button and add to 
     var b = $("<button>");
     b.addClass("btn btn-group btn-sm starButton");
     b.attr("data-name", value);
     b.attr("id", value);  
     b.text(value);
     $(".buttons").append(b);
-}
 
+  })  // end of each loop
+} //********** end of loadbuttons
 
 
 })  //********** end of document ready
