@@ -36,7 +36,6 @@ var currentStar = "";
 
 loadButtons();;
 
-
 //********* Events 
 //********* Events 
 //********* Events 
@@ -55,7 +54,7 @@ $(document).on("click", ".starButton", function() {
     $(".starButton").toggleClass("buttonBackground", false);
     $(this).toggleClass("buttonBackground", true);
     var actor = ($(this).attr("data-name")).split(' ').join('+');
-    var queryURL = "http://api.giphy.com/v1/gifs/search?api_key=" + giphyAPI 
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + giphyAPI 
                                                      + "&limit=10" 
                                                      + "&q=" + actor +'"';
 
@@ -65,7 +64,7 @@ $(document).on("click", ".starButton", function() {
       ,method: "GET"
     }).done(function(response) {
       
-      console.log(response);
+      //console.log(response);
       //console.log(queryURL)
 
       if (response.data.length === 0) {
@@ -135,6 +134,7 @@ $("#addStar").on("click", function() {
 
   var newStar = $("#starInput").val().trim();
 
+  //check to see if nothing entered
   if (!newStar) {
     return;
   } else {
@@ -144,7 +144,7 @@ $("#addStar").on("click", function() {
 
   $("#starInput").val("");
 
-})
+})  //end of add star
 
 //**********  Functions  **********
 //**********  Functions  **********
@@ -169,4 +169,3 @@ function loadButtons() {
 
 
 })  //********** end of document ready
-
